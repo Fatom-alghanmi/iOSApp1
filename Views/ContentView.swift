@@ -8,30 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var viewModel = OrderViewModel()
-    @State private var showingAddOrder = false
-    
+    @StateObject private var viewModel = OrderViewModel()  // shared instance
+
     var body: some View {
-        NavigationStack {
-            List {
-                ForEach(viewModel.orders) { order in
-                    VStack(alignment: .leading) {
-                        Text(order.name).font(.headline)
-                        Text("\(order.size) \(order.drink) - \(order.extras)")
-                            .foregroundColor(.secondary)
-                    }
+        TabView {
+            OrderListView(viewModel: viewModel)  // pass viewModel
+                .tabItem {
+                    Label("Orders", systemImage: "cup.and.saucer.fill")
                 }
-            }
-            .navigationTitle("Tim Hortons Run")
-            .toolbar {
-                Button(action: { showingAddOrder = true }) {
-                    Label("Add Order", systemImage: "plus")
+
+            RunTimerView()
+                .tabItem {
+                    Label("Timer", systemImage: "timer")
                 }
-            }
-            .sheet(isPresented: $showingAddOrder) {
-                AddOrderView(viewModel: viewModel)
-            }
         }
     }
 }
+#Preview {
+    ContentView()
+}
+
 

@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct OrderDetailView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    let order: Order
 
-#Preview {
-    OrderDetailView()
+    var body: some View {
+        VStack(spacing: 20) {
+            Text(order.name)
+                .font(.largeTitle)
+            
+            Text("\(order.size) \(order.drink)")
+                .font(.title2)
+            
+            if let notes = order.notes, !notes.isEmpty {
+                Text("Notes: \(notes)")
+                    .font(.body)
+            }
+            
+            Spacer()
+        }
+        .padding()
+        .navigationTitle("Order Detail")
+    }
 }

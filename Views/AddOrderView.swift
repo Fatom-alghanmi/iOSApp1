@@ -44,7 +44,8 @@ struct AddOrderView: View {
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {
-                        let order = Order(name: name, drink: drink, size: size, extras: extras)
+                        let order = Order(name: name, drink: drink, size: size, notes: extras.isEmpty ? nil : extras)
+
                         viewModel.addOrder(order)
                         dismiss()
                     }

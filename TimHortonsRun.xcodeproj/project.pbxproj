@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		147E52602E7B0735004B9300 /* TimHortonsRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E525F2E7B0735004B9300 /* TimHortonsRunApp.swift */; };
+		147E52892E7B0980004B9300 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E52882E7B096E004B9300 /* OrderViewModel.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		147E526A2E7B073A004B9300 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -25,8 +30,10 @@
 
 /* Begin PBXFileReference section */
 		147E525C2E7B0735004B9300 /* TimHortonsRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimHortonsRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		147E525F2E7B0735004B9300 /* TimHortonsRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimHortonsRunApp.swift; sourceTree = "<group>"; };
 		147E52692E7B073A004B9300 /* TimHortonsRunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimHortonsRunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		147E52732E7B073A004B9300 /* TimHortonsRunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimHortonsRunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		147E52882E7B096E004B9300 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -43,6 +50,16 @@
 		147E52762E7B073A004B9300 /* TimHortonsRunUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = TimHortonsRunUITests;
+			sourceTree = "<group>";
+		};
+		147E528C2E7B0A8B004B9300 /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		147E52932E7B159D004B9300 /* Model */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -76,6 +93,10 @@
 			isa = PBXGroup;
 			children = (
 				147E525E2E7B0735004B9300 /* TimHortonsRun */,
+				147E52932E7B159D004B9300 /* Model */,
+				147E52882E7B096E004B9300 /* OrderViewModel.swift */,
+				147E525F2E7B0735004B9300 /* TimHortonsRunApp.swift */,
+				147E528C2E7B0A8B004B9300 /* Views */,
 				147E526C2E7B073A004B9300 /* TimHortonsRunTests */,
 				147E52762E7B073A004B9300 /* TimHortonsRunUITests */,
 				147E525D2E7B0735004B9300 /* Products */,
@@ -109,6 +130,8 @@
 			);
 			fileSystemSynchronizedGroups = (
 				147E525E2E7B0735004B9300 /* TimHortonsRun */,
+				147E528C2E7B0A8B004B9300 /* Views */,
+				147E52932E7B159D004B9300 /* Model */,
 			);
 			name = TimHortonsRun;
 			packageProductDependencies = (
@@ -236,6 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				147E52602E7B0735004B9300 /* TimHortonsRunApp.swift in Sources */,
+				147E52892E7B0980004B9300 /* OrderViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
