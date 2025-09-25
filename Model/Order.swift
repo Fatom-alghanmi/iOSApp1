@@ -7,19 +7,19 @@
 
 import Foundation
 
-struct Order: Identifiable, Codable, Hashable {
+struct Order: Identifiable, Codable, Hashable, Equatable {
     let id = UUID()
     var name: String
-    var drink: String
+    var item: String
     var size: String
     var notes: String?  // optional
     var date: Date = Date() 
 
     // Sample data
     static let sampleOrders: [Order] = [
-        Order(name: "Fatom", drink: "Iced Capp", size: "Large", notes: nil),
-        Order(name: "Ali", drink: "Double Double", size: "Medium", notes: "Extra sugar"),
-        Order(name: "Sara", drink: "Steeped Tea", size: "Small", notes: nil)
+        Order(name: "Fatom", item: "Iced Capp", size: "Large", notes: nil),
+        Order(name: "Ali", item: "Double Double", size: "Medium", notes: "Extra sugar"),
+        Order(name: "Sara", item: "Steeped Tea", size: "Small", notes: nil)
     ]
 
     // Conform to Hashable manually (optional, for more safety)

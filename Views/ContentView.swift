@@ -17,10 +17,6 @@ struct ContentView: View {
                     Label("Orders", systemImage: "cup.and.saucer.fill")
                 }
 
-            RunTimerView()
-                .tabItem {
-                    Label("Timer", systemImage: "timer")
-                }
         }
     }
 }

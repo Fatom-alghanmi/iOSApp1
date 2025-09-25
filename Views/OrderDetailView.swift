@@ -15,7 +15,7 @@ struct OrderDetailView: View {
             Text(order.name)
                 .font(.largeTitle)
             
-            Text("\(order.size) \(order.drink)")
+            Text("\(order.size) \(order.item)")
                 .font(.title2)
             
             if let notes = order.notes, !notes.isEmpty {
